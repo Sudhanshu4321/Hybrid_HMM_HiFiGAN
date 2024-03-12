@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hybrid HMM HiFiGAN-based speech synthesis</title>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="css/pcTest.css">
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo-container">
+				<img class='iitm-logo' src="img/iitm-logo.jpg"/>
+			</div>
+			<div class="page-title" >
+				<div class= "page-title-main">
+					Hybrid HMM + HiFiGAN based model
+				</div>
+				<div class= "page-title-sub above-640">
+						Department of Computer Science and Engineering, IIT Madras
+				</div>
+				<div class= "page-title-sub below-640">
+						Department of CSE, IIT Madras
+				</div>
+			</div>
+    
+		</div>
+		<div class="content">
+			<div class="instructions">
+				 Title of the paper: <b> Fast and small footprint Hybrid HMM-HiFiGAN based system for  speech synthesis in Indian languages </b>
+				<!-- <br>( to be Communicated to SSW 2023) -->
+				<br>
+				<br>
+				<br>
+
+	<h3> System Description (For Hindi Dataset)</h3>
+ 			<p align="left">
+			<br><b>System 1:</b> HMM-based TTS System trained on 1 hour of read-speech	
+			<br><b>System 2:</b> HMM-based TTS System trained on read-speech using mgc as spectral feature
+			<br><b>System 3:</b> Hybrid HMM model-HiFi-GAN model using Histogram Equalization
+			<br><b>System 4:</b> FastSpeech model trained on read speech
+			<br><b>System 5:</b> HMM-based TTS System trained on read-speech using 80 mel-specs as spectral feature
+			<br><b>System 6:</b> HMM-based TTS System trained on read-speech using 120 mel-specs as spectral feature		</p>		
+		<!-- <div class="left-align">In a country like India, which has a diverse linguistic culture, code-switching is very common. Fluency in
+multiple languages brings in code-switching sub-consciously. Many of the daily-used words in native languages
+have been replaced by their English counterparts (such as fan, switch, light, train, etc.). Further, in the current
+scenario, one is surrounded by people of different linguistic backgrounds. This results in borrowing of words from
+other languages into one's vocabulary. Conversational speech may include sentences, each of which is a mixture
+of words from different languages, or a mixture of sentences from different languages. Such a scenario calls
+for the inclusion of code-switching ability in current TTS systems to produce natural sounding speech. These
+systems should be capable of synthesising code-switched sentences that preserve the original pronunciation of
+the words while maintaining the accent of the speaker.</span>
+			</div> -->
+			
+			<br>
+			<p class="centeralign"><b> <u>	Synthesized speech voice quality across 6 TTS systems  </u></b></p>
+			
+			
+			<table class="demo-table">
+
+				<tr>
+				    <th rowspan=2>Samples</th>
+				    <th colspan="6" class="centeralign">TTS System Versions</th>
+				</tr>
+			  <tr>
+				    <th>System 1</th>
+				    <th>System 2</th>
+				    <th>System 3</th>
+				    <th>System 4</th>	
+				    <th>System 5</th>	
+				    <th>System 6</th>			    
+			  </tr>
+			  
+			  <tr>
+			  		<td class="type">
+				    	Sample 1 
+				    	
+				    </td>
+			  		<td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/1hr_HTS/sample1.wav"></audio><img  width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/Normal_HTS/sample1.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				      <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/HEQ/sample1.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				      <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/FS2/sample1.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				     <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/80_HTS/sample1.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				     <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/120_HTS/sample1.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+
+				    							    
+			  </tr>
+			  <tr>
+			  		<td class="type">
+				    	Sample 2 
+				    	
+				    </td>
+			  		<td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/1hr_HTS/sample2.wav"></audio><img  width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/Normal_HTS/sample2.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/HEQ/sample2.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+
+			            <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/FS2/sample2.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/80_HTS/sample2.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/120_HTS/sample2.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    						    
+			  </tr>
+			  <tr>
+			  		<td class="type">
+				    	Sample 3 
+				    	
+				    </td>
+			  		<td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/1hr_HTS/sample3.wav"></audio><img  width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/Normal_HTS/sample3.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				      <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/HEQ/sample3.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/FS2/sample3.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/80_HTS/sample3.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/120_HTS/sample3.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    	
+				    						    
+			  </tr>
+			  <tr>
+			  		<td class="type">
+				    	Sample 4 
+				    	
+				    </td>
+			  		<td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/1hr_HTS/sample4.wav"></audio><img  width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/Normal_HTS/sample4.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				      <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/HEQ/sample4.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+                                      <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/FS2/sample4.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				      <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/prosody-change/sample4.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+				    </td>
+				    <td>
+				    	<a onclick="closeAllAudio();this.firstChild.play()"><audio><source src="audio_files/120_HTS/sample4.wav"></audio><img width="30" alt="" src="img/audio.png" height="30"></a>
+
+ </td>	
+
+			  </tr>
+			</table>
+
+<br>
+<br>
+			
+		</div>
+		<div class="footer">
+		</div>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/code.js"></script>
+		
+	</body>
+</html>
+
